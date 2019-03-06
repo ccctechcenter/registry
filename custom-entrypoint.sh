@@ -2,4 +2,4 @@
 
 echo "${REGISTRY_PASSWORD_LIST}" > /auth/htpasswd
 
-exec /entrypoint.sh
+#exec /entrypoint.sh
