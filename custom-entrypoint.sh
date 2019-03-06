@@ -1,5 +1,12 @@
-#!/bin/bash
+#!/bin/sh
+
+set -e
 
 echo "${REGISTRY_PASSWORD_LIST}" > /auth/htpasswd
 
-#exec /entrypoint.sh
+case "$1" in
+    *.yaml|*.yml) set -- registry serve "$@" ;;
+    serve|garbage-collect|help|-*) set -- registry "$@" ;;
+esac
+
+exec "$@"
