@@ -1,4 +1,4 @@
-FROM registry:2.7.1
+FROM registry:2.8.0
 
 MAINTAINER jbaker@ccctechcenter.org
 
